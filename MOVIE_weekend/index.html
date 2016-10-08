@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>周末看什么</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/wap.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+</head>
+
+<body ng-app="moviecat">
+    <div class="top" ng-controller="mainController">
+        <div class="header">
+            <a href="#/home_page"><img src="assets/img/logo.jpg" alt=""></a>
+            <div class="search">
+                <form ng-submit="search()">
+                    <input ng-model="query" class="my-input" type="text" placeholder="电影搜索">
+                    <button>搜索</button>
+                </form>
+            </div>
+        </div>
+        <nav class="nav">
+            <ul>
+                <!--li中添加 active 类样式，显示焦点状态。-->
+                <li class="active" auto-focus><a href="#/home_page">首页</a></li>
+                <li auto-focus><a href="#/in_theaters" >院线热播</a></li>
+                <li auto-focus><a href="#/coming_soon" >即将上映</a></li>
+                <li auto-focus><a href="#/top250" >经典推荐</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+
+    <!--电影列表开始-->
+        <div ng-view></div>
+        <!--电影列表结束-->
+
+        <!-- 电影详情开始 -->
+
+        <!-- 电影详情结束 -->
+        <!--其他-->
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p>版权私有&copy; 广东佛山 伟立(欢迎修改)</p>
+        </div>
+    </footer>
+    <!-- 百各庄 -->
+    <script src="assets/js/prefixfree.min.js"></script>
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-route/angular-route.js"></script>
+    <script src="common/kenJsonp.js"></script>
+    <!--<script src="coming_soon/coming_soon.js"></script>-->
+    <!--<script src="top250/top250.js"></script>-->
+    <script src="home_page/home_page.js"></script>
+    <script src="movie_list/movie_list.js"></script>
+    <script src="autoFocus/autoFocus.js"></script>
+    <script src="details/details.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
