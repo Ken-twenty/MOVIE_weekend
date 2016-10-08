@@ -63,7 +63,7 @@
             //调用自己封装的jsonp
             jsonpService.jsonp(
                 // 'http://api.douban.com/v2/movie/movie_list',
-                'http://api.douban.com/v2/movie/' + $routeParams.route,
+                'https://api.douban.com/v2/movie/' + $routeParams.route,
                 {count : count,start : start,q : $routeParams.q},//服务器会忽略多余的参数
                 function (data) {
                     // console.log(data);
